@@ -1,0 +1,13 @@
+.vscode
+.terraform
+.terraform*
+*tfstate*
+terraform.tfvars
+
+venv/
+
+terraform/terraform.tfvars
+
+.env
+
+
