@@ -26,7 +26,7 @@ AWS_ACCESS_KEY_ID= os.getenv('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY= os.getenv('AWS_SECRET_ACCESS_KEY')
 AWS_REGION= os.getenv('AWS_REGION')
 AWS_S3_BUCKET= os.getenv('AWS_S3_BUCKET')
-FILE_KEY = 'Largence CF to 31-07-2025.csv'
+FILE_KEY = 'sample_data.csv'
 
 # Create S3 client
 s3 = boto3.client(
@@ -182,15 +182,15 @@ conn = snowflake.connector.connect(
     password=os.getenv('SNOWFLAKE_PASSWORD'),
     account=os.getenv('SNOWFLAKE_ACCOUNT'),
     warehouse=os.getenv('SNOWFLAKE_WAREHOUSE'),
-    database='PRE_OPERATING_EXPENSES',
+    database='PRE_OPERATING_EXPENSES_SAMPLE',
     schema=os.getenv('SNOWFLAKE_SCHEMA').upper()
 )
 
 cur = conn.cursor()
 
 
-cur.execute("""
-CREATE OR REPLACE TABLE pre_operating_expenses.expense_data.expenses (
+cur.execute(""" 
+CREATE OR REPLACE TABLE pre_operating_expenses_sample.expense_data_sample.expenses (
     expense_id INTEGER,
     date_of_expense DATE,
     cost FLOAT,
@@ -200,7 +200,7 @@ CREATE OR REPLACE TABLE pre_operating_expenses.expense_data.expenses (
 """)
 
 cur.execute("""
-CREATE OR REPLACE TABLE pre_operating_expenses.expense_data.categories (
+CREATE OR REPLACE TABLE pre_operating_expenses_sample.expense_data_sample.categories (
     category_id INTEGER,
     category_type STRING,
     expense_name STRING
@@ -208,7 +208,7 @@ CREATE OR REPLACE TABLE pre_operating_expenses.expense_data.categories (
 """)
 
 cur.execute("""
-CREATE OR REPLACE TABLE pre_operating_expenses.expense_data.vendors (
+CREATE OR REPLACE TABLE pre_operating_expenses_sample.expense_data_sample.vendors (
     vendor_id INTEGER,
     vendor_name STRING,
     vendor_contact_information STRING
@@ -224,7 +224,7 @@ write_pandas(
     conn,
     spark_df_1.toPandas(),
     table_name='EXPENSES',
-    database='PRE_OPERATING_EXPENSES',
+    database='PRE_OPERATING_EXPENSES_SAMPLE',
     schema=os.getenv('SNOWFLAKE_SCHEMA').upper(),
     auto_create_table=False
 )
@@ -233,7 +233,7 @@ write_pandas(
     conn,
     spark_df_2.toPandas(),
     table_name='CATEGORIES',
-    database='PRE_OPERATING_EXPENSES',
+    database='PRE_OPERATING_EXPENSES_SAMPLE',
     schema=os.getenv('SNOWFLAKE_SCHEMA').upper(),
     auto_create_table=False
 )
@@ -242,7 +242,7 @@ write_pandas(
     conn,
     spark_df_3.toPandas(),
     table_name='VENDORS',
-    database='PRE_OPERATING_EXPENSES',
+    database='PRE_OPERATING_EXPENSES_SAMPLE',
     schema=os.getenv('SNOWFLAKE_SCHEMA').upper(),
     auto_create_table=False
 )

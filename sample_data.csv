@@ -1,0 +1,147 @@
+Pre Operating Expense,Date of Expense,Cost,Vendor,Category,Contact Info
+Domain Purchase Fee,30/05/2025,7.29,Companies House,Intellectual Property,enquiries@companieshouse.gov.uk
+Company Registration Fee,30/05/2025,50,GoDaddy,Intellectual Property,myrecruiter@godaddy.com
+ChatGPT Subscription,13/05/2026,20,OpenAI,Recurring Costs,support@openai.com
+Article Publish Fee,23/07/2025,22.13,Business Now,Marketing,enquiries@business-now.co.uk
+Office Supplies,15/06/2025,45.67,Staples,Office Expenses,support@staples.com
+Website Hosting,01/06/2025,12.99,Bluehost,Technology,help@bluehost.com
+Business Cards,20/06/2025,89.50,Vistaprint,Marketing,support@vistaprint.com
+Accounting Software,05/06/2025,29.99,QuickBooks,Software,help@quickbooks.com
+Legal Consultation,12/06/2025,150.00,Smith & Associates,Legal,info@smithlaw.com
+Insurance Premium,01/07/2025,85.00,Allstate,Insurance,service@allstate.com
+Conference Registration,25/06/2025,299.00,TechCon 2025,Professional Development,info@techcon.com
+Travel Expenses,18/06/2025,234.56,Delta Airlines,Travel,reservations@delta.com
+Hotel Accommodation,18/06/2025,189.00,Marriott,Travel,reservations@marriott.com
+Meal Expenses,18/06/2025,67.89,Various Restaurants,Travel,info@restaurants.com
+Software License,10/06/2025,199.00,Adobe Creative Suite,Software,support@adobe.com
+Phone Bill,01/06/2025,45.00,Verizon,Utilities,service@verizon.com
+Internet Service,01/06/2025,79.99,Comcast,Utilities,service@comcast.com
+Electricity Bill,15/06/2025,125.45,Local Power Co,Utilities,service@localpower.com
+Water Bill,15/06/2025,45.67,City Water Dept,Utilities,service@citywater.com
+Cleaning Services,20/06/2025,120.00,CleanPro Services,Office Expenses,info@cleanpro.com
+Coffee Supplies,25/06/2025,34.50,Starbucks,Office Expenses,support@starbucks.com
+Printer Ink,28/06/2025,67.89,HP Store,Office Expenses,support@hp.com
+Paper Supplies,30/06/2025,23.45,Office Depot,Office Expenses,support@officedepot.com
+Postage Stamps,05/07/2025,15.00,USPS,Office Expenses,service@usps.com
+Banking Fees,01/07/2025,25.00,Chase Bank,Banking,service@chase.com
+Credit Card Processing,15/07/2025,45.67,Square,Banking,help@square.com
+Payroll Service,01/07/2025,39.99,ADP,Human Resources,service@adp.com
+Background Check,10/07/2025,35.00,Checkr,Human Resources,help@checkr.com
+Employee Training,15/07/2025,199.00,LinkedIn Learning,Professional Development,help@linkedin.com
+Marketing Materials,20/07/2025,156.78,PrintPlace,Marketing,support@printplace.com
+Social Media Ads,25/07/2025,200.00,Facebook Ads,Marketing,help@facebook.com
+Google Ads,30/07/2025,150.00,Google,Marketing,ads-support@google.com
+SEO Services,05/08/2025,500.00,SEO Pro,Marketing,info@seopro.com
+Content Writing,10/08/2025,300.00,Upwork,Marketing,help@upwork.com
+Video Production,15/08/2025,800.00,VideoPro Studios,Marketing,info@videopro.com
+Photography Services,20/08/2025,250.00,PhotoStudio,Marketing,info@photostudio.com
+Logo Design,25/08/2025,400.00,DesignHub,Marketing,info@designhub.com
+Business Brochures,30/08/2025,89.99,PrintShop,Marketing,support@printshop.com
+Trade Show Booth,05/09/2025,1200.00,ExpoCenter,Marketing,info@expocenter.com
+Email Marketing,10/09/2025,29.99,Mailchimp,Marketing,help@mailchimp.com
+CRM Software,15/09/2025,45.00,Salesforce,Software,help@salesforce.com
+Project Management,20/09/2025,12.99,Asana,Software,help@asana.com
+Cloud Storage,25/09/2025,9.99,Dropbox,Technology,help@dropbox.com
+Backup Service,30/09/2025,19.99,Carbonite,Technology,help@carbonite.com
+Cybersecurity,05/10/2025,89.99,Norton,Technology,help@norton.com
+VPN Service,10/10/2025,12.99,NordVPN,Technology,help@nordvpn.com
+Domain Renewal,15/10/2025,15.99,GoDaddy,Intellectual Property,myrecruiter@godaddy.com
+Trademark Filing,20/10/2025,225.00,USPTO,Intellectual Property,info@uspto.gov
+Patent Search,25/10/2025,300.00,Patent Office,Intellectual Property,info@patentoffice.gov
+Copyright Registration,30/10/2025,45.00,Copyright Office,Intellectual Property,info@copyright.gov
+Business License,05/11/2025,75.00,City Hall,Legal,info@cityhall.gov
+Contract Review,10/11/2025,200.00,Legal Services,Legal,info@legalservices.com
+Tax Preparation,15/11/2025,350.00,TaxPro,Accounting,info@taxpro.com
+Bookkeeping Service,20/11/2025,150.00,Bookkeeper Pro,Accounting,info@bookkeeperpro.com
+Financial Audit,25/11/2025,500.00,Audit Services,Accounting,info@auditservices.com
+Business Valuation,30/11/2025,800.00,Valuation Pro,Accounting,info@valuationpro.com
+Insurance Claim,05/12/2025,0.00,Allstate,Insurance,service@allstate.com
+Liability Insurance,10/12/2025,120.00,State Farm,Insurance,service@statefarm.com
+Workers Comp,15/12/2025,95.00,Workers Comp Co,Insurance,service@workerscomp.com
+Health Insurance,20/12/2025,450.00,Blue Cross,Insurance,service@bluecross.com
+Dental Insurance,25/12/2025,75.00,Dental Co,Insurance,service@dentalco.com
+Vision Insurance,30/12/2025,45.00,Vision Co,Insurance,service@visionco.com
+Life Insurance,05/01/2026,120.00,Life Insurance Co,Insurance,service@lifeinsurance.com
+Disability Insurance,10/01/2026,85.00,Disability Co,Insurance,service@disabilityco.com
+Professional Liability,15/01/2026,200.00,Professional Liability Co,Insurance,service@proliability.com
+Cyber Insurance,20/01/2026,150.00,Cyber Insurance Co,Insurance,service@cyberinsurance.com
+Equipment Insurance,25/01/2026,75.00,Equipment Insurance Co,Insurance,service@equipmentinsurance.com
+Vehicle Insurance,30/01/2026,180.00,Vehicle Insurance Co,Insurance,service@vehicleinsurance.com
+Property Insurance,05/02/2026,250.00,Property Insurance Co,Insurance,service@propertyinsurance.com
+Umbrella Insurance,10/02/2026,300.00,Umbrella Insurance Co,Insurance,service@umbrellainsurance.com
+Key Person Insurance,15/02/2026,400.00,Key Person Insurance Co,Insurance,service@keypersoninsurance.com
+Business Interruption,20/02/2026,175.00,Business Interruption Co,Insurance,service@businessinterruption.com
+Equipment Purchase,25/02/2026,1200.00,Office Equipment Co,Office Expenses,info@officeequipment.com
+Furniture Purchase,01/03/2026,800.00,Office Furniture Co,Office Expenses,info@officefurniture.com
+Computer Equipment,05/03/2026,1500.00,Computer Store,Technology,info@computerstore.com
+Phone Equipment,10/03/2026,400.00,Phone Store,Technology,info@phonestore.com
+Network Equipment,15/03/2026,600.00,Network Store,Technology,info@networkstore.com
+Security System,20/03/2026,800.00,Security Store,Technology,info@securitystore.com
+Surveillance Cameras,25/03/2026,500.00,Camera Store,Technology,info@camerastore.com
+Access Control,30/03/2026,300.00,Access Control Co,Technology,info@accesscontrol.com
+Fire Suppression,05/04/2026,400.00,Fire Safety Co,Technology,info@firesafety.com
+Alarm System,10/04/2026,350.00,Alarm Store,Technology,info@alarmstore.com
+Intercom System,15/04/2026,250.00,Intercom Store,Technology,info@intercomstore.com
+PA System,20/04/2026,450.00,PA Store,Technology,info@pastore.com
+Projector,25/04/2026,600.00,Projector Store,Technology,info@projectorstore.com
+Whiteboard,30/04/2026,150.00,Whiteboard Store,Office Expenses,info@whiteboardstore.com
+Filing Cabinet,05/05/2026,200.00,Filing Store,Office Expenses,info@filingstore.com
+Storage Shelves,10/05/2026,180.00,Storage Store,Office Expenses,info@storagestore.com
+Conference Table,15/05/2026,500.00,Table Store,Office Expenses,info@tablestore.com
+Office Chairs,20/05/2026,400.00,Chair Store,Office Expenses,info@chairstore.com
+Desk Lamps,25/05/2026,75.00,Lamp Store,Office Expenses,info@lampstore.com
+Air Purifier,30/05/2026,200.00,Air Store,Office Expenses,info@airstore.com
+Heating System,05/06/2026,1200.00,Heating Co,Utilities,service@heatingco.com
+Cooling System,10/06/2026,1500.00,Cooling Co,Utilities,service@coolingco.com
+Plumbing Repair,15/06/2026,300.00,Plumbing Co,Utilities,service@plumbingco.com
+Electrical Work,20/06/2026,450.00,Electrical Co,Utilities,service@electricalco.com
+HVAC Maintenance,25/06/2026,200.00,HVAC Co,Utilities,service@hvacco.com
+Roof Repair,30/06/2026,800.00,Roofing Co,Utilities,service@roofingco.com
+Window Replacement,05/07/2026,600.00,Window Co,Utilities,service@windowco.com
+Door Installation,10/07/2026,400.00,Door Co,Utilities,service@doorco.com
+Flooring Installation,15/07/2026,1200.00,Flooring Co,Utilities,service@flooringco.com
+Paint Job,20/07/2026,500.00,Painting Co,Utilities,service@paintingco.com
+Landscaping,25/07/2026,300.00,Landscaping Co,Utilities,service@landscapingco.com
+Pest Control,30/07/2026,150.00,Pest Control Co,Utilities,service@pestcontrolco.com
+Waste Management,05/08/2026,75.00,Waste Co,Utilities,service@wasteco.com
+Recycling Service,10/08/2026,45.00,Recycling Co,Utilities,service@recyclingco.com
+Security Guard,15/08/2026,800.00,Security Guard Co,Office Expenses,info@securityguardco.com
+Janitorial Service,20/08/2026,400.00,Janitorial Co,Office Expenses,info@janitorialco.com
+Maintenance Service,25/08/2026,250.00,Maintenance Co,Office Expenses,info@maintenanceco.com
+Repair Service,30/08/2026,180.00,Repair Co,Office Expenses,info@repairco.com
+Installation Service,05/09/2026,120.00,Installation Co,Office Expenses,info@installationco.com
+Delivery Service,10/09/2026,60.00,Delivery Co,Office Expenses,info@deliveryco.com
+Moving Service,15/09/2026,500.00,Moving Co,Office Expenses,info@movingco.com
+Storage Rental,20/09/2026,100.00,Storage Co,Office Expenses,info@storageco.com
+Warehouse Rental,25/09/2026,800.00,Warehouse Co,Office Expenses,info@warehouseco.com
+Office Rental,30/09/2026,1500.00,Office Rental Co,Office Expenses,info@officerentalco.com
+Meeting Room Rental,05/10/2026,75.00,Meeting Room Co,Office Expenses,info@meetingroomco.com
+Conference Room Rental,10/10/2026,150.00,Conference Room Co,Office Expenses,info@conferenceroomco.com
+Event Space Rental,15/10/2026,500.00,Event Space Co,Office Expenses,info@eventspaceco.com
+Parking Space Rental,20/10/2026,50.00,Parking Co,Office Expenses,info@parkingco.com
+Storage Unit Rental,25/10/2026,80.00,Storage Unit Co,Office Expenses,info@storageunitco.com
+Equipment Rental,30/10/2026,200.00,Equipment Rental Co,Office Expenses,info@equipmentrentalco.com
+Tool Rental,05/11/2026,75.00,Tool Rental Co,Office Expenses,info@toolrentalco.com
+Vehicle Rental,10/11/2026,150.00,Vehicle Rental Co,Travel,info@vehiclerentalco.com
+Hotel Room Rental,15/11/2026,120.00,Hotel Co,Travel,info@hotelco.com
+Meeting Room Rental,20/11/2026,100.00,Meeting Room Co,Travel,info@meetingroomco.com
+Conference Room Rental,25/11/2026,200.00,Conference Room Co,Travel,info@conferenceroomco.com
+Event Space Rental,30/11/2026,600.00,Event Space Co,Travel,info@eventspaceco.com
+Transportation Service,05/12/2026,80.00,Transportation Co,Travel,info@transportationco.com
+Taxi Service,10/12/2026,45.00,Taxi Co,Travel,info@taxico.com
+Uber Service,15/12/2026,35.00,Uber,Travel,help@uber.com
+Lyft Service,20/12/2026,30.00,Lyft,Travel,help@lyft.com
+Train Ticket,25/12/2026,75.00,Train Co,Travel,info@trainco.com
+Bus Ticket,30/12/2026,25.00,Bus Co,Travel,info@busco.com
+Subway Ticket,05/01/2027,15.00,Subway Co,Travel,info@subwayco.com
+Parking Fee,10/01/2027,20.00,Parking Co,Travel,info@parkingco.com
+Toll Fee,15/01/2027,8.50,Toll Co,Travel,info@tollco.com
+Gas Expense,20/01/2027,45.00,Gas Station,Travel,info@gasstation.com
+Oil Change,25/01/2027,35.00,Oil Change Co,Travel,info@oilchangeco.com
+Car Wash,30/01/2027,15.00,Car Wash Co,Travel,info@carwashco.com
+Car Maintenance,05/02/2027,200.00,Car Maintenance Co,Travel,info@carmaintenanceco.com
+Car Repair,10/02/2027,350.00,Car Repair Co,Travel,info@carrepairco.com
+Car Insurance,15/02/2027,120.00,Car Insurance Co,Travel,info@carinsuranceco.com
+Car Registration,20/02/2027,75.00,Car Registration Co,Travel,info@carregistrationco.com
+Car Inspection,25/02/2027,50.00,Car Inspection Co,Travel,info@carinspectionco.com
+Car Towing,01/03/2027,100.00,Car Towing Co,Travel,info@cartowingco.com

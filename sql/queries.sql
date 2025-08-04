@@ -1,5 +1,5 @@
 -- Create a warehouse
-CREATE WAREHOUSE data_warehouse_1
+CREATE WAREHOUSE data_warehouse_2
   WITH WAREHOUSE_SIZE = 'XSMALL'      -- size options: XSMALL, SMALL, MEDIUM, etc.
   WAREHOUSE_TYPE = 'STANDARD'         -- or 'SNOWPARK-OPTIMIZED'
   AUTO_SUSPEND = 300                  -- auto suspend after 5 minutes of inactivity
@@ -7,13 +7,13 @@ CREATE WAREHOUSE data_warehouse_1
   INITIALLY_SUSPENDED = TRUE;
 
 -- Create a database
-CREATE DATABASE pre_operating_expenses;
+CREATE DATABASE pre_operating_expenses_sample;
 
 -- Switch to the newly created database
-USE DATABASE pre_operating_expenses;
+USE DATABASE pre_operating_expenses_sample;
 
 -- Create a schema inside the database
-CREATE SCHEMA expense_data;  -- or name it something meaningful to your project
+CREATE SCHEMA expense_data_sample;  -- or name it something meaningful to your project
 
 show tables;
 

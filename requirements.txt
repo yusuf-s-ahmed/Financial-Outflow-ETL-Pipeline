@@ -2,3 +2,6 @@ pyspark==3.2.1
 pandas
 boto3
 python-dotenv
+apache-airflow[amazon,snowflake]==2.9.1
+apache-airflow-providers-apache-spark
+
