@@ -6,7 +6,7 @@ import sys
 import os
 
 # Add the project root to Python path so we can import the app
-sys.path.append('/opt/airflow/dags/../../')
+sys.path.append('/opt/airflow/python')
 
 default_args = {
     'owner': 'yusuf',
@@ -32,14 +32,14 @@ def process_csv_data():
     import subprocess
     import os
     
-    # Change to the project directory
-    project_dir = '/opt/airflow/dags/../../'
-    os.chdir(project_dir)
+    # Change to the python directory
+    python_dir = '/opt/airflow/python'
+    os.chdir(python_dir)
     
-    # Activate virtual environment and run the Python script
+    # Run the Python script directly (no need for virtual environment in container)
     cmd = [
-        '/opt/airflow/dags/../../venv/Scripts/python.exe',
-        '/opt/airflow/dags/../../python/app.py'
+        'python',
+        '/opt/airflow/python/app.py'
     ]
     
     try:
@@ -63,9 +63,8 @@ process_task = PythonOperator(
 def run_python_script():
     """Alternative method using bash command"""
     return """
-    cd /opt/airflow/dags/../../ && \
-    source venv/Scripts/activate && \
-    python python/app.py
+    cd /opt/airflow/python && \
+    python app.py
     """
 
 bash_task = BashOperator(

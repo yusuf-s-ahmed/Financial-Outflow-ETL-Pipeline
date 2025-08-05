@@ -6,7 +6,7 @@ import subprocess
 
 def run_etl_script():
     # Run the app.py script from the mounted volume
-    subprocess.run(["python", "/opt/airflow/dags/../../python/app.py"], check=True)
+    subprocess.run(["python", "/opt/airflow/python/app.py"], check=True)
 
 with DAG(
     dag_id='s3_to_snowflake_etl',

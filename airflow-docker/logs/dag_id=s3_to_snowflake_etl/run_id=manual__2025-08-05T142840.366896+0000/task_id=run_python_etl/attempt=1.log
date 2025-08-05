@@ -1,0 +1,144 @@
+{"timestamp":"2025-08-05T14:28:50.255469","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-08-05T14:28:50.256619","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/etl_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-08-05T14:28:50.700773Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:28:50.702309Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:28:50.703421Z","level":"info","event":"Current task name:run_python_etl","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:28:50.704054Z","level":"info","event":"Dag name:s3_to_snowflake_etl","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:05.473741Z","level":"error","event":"WARNING: An illegal reflective access operation has occurred","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T14:29:05.475204Z","level":"error","event":"WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/airflow/.local/lib/python3.10/site-packages/pyspark/jars/spark-unsafe_2.12-3.2.1.jar) to constructor java.nio.DirectByteBuffer(long,int)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T14:29:05.476545Z","level":"error","event":"WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T14:29:05.477704Z","level":"error","event":"WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T14:29:05.478966Z","level":"error","event":"WARNING: All illegal access operations will be denied in a future release","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T14:29:07.399209Z","level":"error","event":"Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T14:29:07.401533Z","level":"error","event":"Setting default log level to \"WARN\".","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T14:29:07.403759Z","level":"error","event":"To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T14:29:08.362178Z","level":"error","event":"25/08/05 14:29:08 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.072133Z","level":"info","event":"PySpark version: 3.2.1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.103452Z","level":"info","event":"Columns: ['expense_id', 'date_of_expense', 'cost', 'category_id', 'vendor_id']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.104892Z","level":"info","event":"Data types:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.106227Z","level":"info","event":" expense_id           int64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.107452Z","level":"info","event":"date_of_expense     object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.109670Z","level":"info","event":"cost               float64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.110784Z","level":"info","event":"category_id          int64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.111919Z","level":"info","event":"vendor_id            int64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.113060Z","level":"info","event":"dtype: object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.114287Z","level":"info","event":"First 5 rows:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.115620Z","level":"info","event":"    expense_id date_of_expense   cost  category_id  vendor_id","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.117979Z","level":"info","event":"0           1      2025-05-30   7.29            1          1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.120388Z","level":"info","event":"1           2      2025-05-30  50.00            2          2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.121474Z","level":"info","event":"2           3      2026-05-13  20.00            3          3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.122566Z","level":"info","event":"3           4      2025-07-23  22.13            4          4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.123833Z","level":"info","event":"4           5      2025-06-15  45.67            5          5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.125131Z","level":"info","event":"Columns: ['category_id', 'category_type', 'expense_name']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.126415Z","level":"info","event":"Data types:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.127817Z","level":"info","event":" category_id       int64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.130286Z","level":"info","event":"category_type    object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.131541Z","level":"info","event":"expense_name     object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.132823Z","level":"info","event":"dtype: object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.134352Z","level":"info","event":"First 5 rows:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.136251Z","level":"info","event":"    category_id          category_type              expense_name","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.138113Z","level":"info","event":"0            1  Intellectual Property       Domain Purchase Fee","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.139927Z","level":"info","event":"1            2  Intellectual Property  Company Registration Fee","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.141957Z","level":"info","event":"2            3        Recurring Costs      ChatGPT Subscription","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.146309Z","level":"info","event":"3            4              Marketing       Article Publish Fee","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.147831Z","level":"info","event":"4            5        Office Expenses           Office Supplies","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.149384Z","level":"info","event":"Columns: ['vendor_id', 'vendor_name', 'vendor_contact_information']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.150511Z","level":"info","event":"Data types:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.152811Z","level":"info","event":" vendor_id                      int64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.153981Z","level":"info","event":"vendor_name                   object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.155441Z","level":"info","event":"vendor_contact_information    object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.156784Z","level":"info","event":"dtype: object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.158362Z","level":"info","event":"First 5 rows:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.160045Z","level":"info","event":"    vendor_id      vendor_name       vendor_contact_information","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.161780Z","level":"info","event":"0          1  Companies House  enquiries@companieshouse.gov.uk","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.163247Z","level":"info","event":"1          2          GoDaddy          myrecruiter@godaddy.com","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.165148Z","level":"info","event":"2          3           OpenAI               support@openai.com","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.166488Z","level":"info","event":"3          4     Business Now     enquiries@business-now.co.uk","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.167982Z","level":"info","event":"4          5          Staples              support@staples.com","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.170796Z","level":"info","event":"Showing all rows and columns in df_1:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.172371Z","level":"info","event":"+----------+---------------+------+-----------+---------+","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.173672Z","level":"info","event":"|EXPENSE_ID|DATE_OF_EXPENSE|  COST|CATEGORY_ID|VENDOR_ID|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.177369Z","level":"info","event":"+----------+---------------+------+-----------+---------+","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.179106Z","level":"info","event":"|         1|     2025-05-30|  7.29|          1|        1|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.181805Z","level":"info","event":"|         2|     2025-05-30|  50.0|          2|        2|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.184642Z","level":"info","event":"|         3|     2026-05-13|  20.0|          3|        3|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.186764Z","level":"info","event":"|         4|     2025-07-23| 22.13|          4|        4|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.188980Z","level":"info","event":"|         5|     2025-06-15| 45.67|          5|        5|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.190459Z","level":"info","event":"|         6|     2025-06-01| 12.99|          6|        6|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.191760Z","level":"info","event":"|         7|     2025-06-20|  89.5|          7|        7|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.193842Z","level":"info","event":"|         8|     2025-06-05| 29.99|          8|        8|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.195378Z","level":"info","event":"|         9|     2025-06-12| 150.0|          9|        9|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.197438Z","level":"info","event":"|        10|     2025-07-01|  85.0|         10|       10|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.198969Z","level":"info","event":"|        11|     2025-06-25| 299.0|         11|       11|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.200347Z","level":"info","event":"|        12|     2025-06-18|234.56|         12|       12|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.201844Z","level":"info","event":"|        13|     2025-06-18| 189.0|         13|       13|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.203435Z","level":"info","event":"|        14|     2025-06-18| 67.89|         14|       14|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.204978Z","level":"info","event":"|        15|     2025-06-10| 199.0|         15|       15|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.206810Z","level":"info","event":"|        16|     2025-06-01|  45.0|         16|       16|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.208546Z","level":"info","event":"|        17|     2025-06-01| 79.99|         17|       17|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.209904Z","level":"info","event":"|        18|     2025-06-15|125.45|         18|       18|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.211488Z","level":"info","event":"|        19|     2025-06-15| 45.67|         19|       19|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.212687Z","level":"info","event":"|        20|     2025-06-20| 120.0|         20|       20|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.216108Z","level":"info","event":"+----------+---------------+------+-----------+---------+","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.218090Z","level":"info","event":"only showing top 20 rows","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.220925Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.222347Z","level":"info","event":"Showing all rows and columns in df_2:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.224754Z","level":"info","event":"+-----------+--------------------+--------------------+","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.226564Z","level":"info","event":"|CATEGORY_ID|       CATEGORY_TYPE|        EXPENSE_NAME|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.228252Z","level":"info","event":"+-----------+--------------------+--------------------+","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.232084Z","level":"info","event":"|          1|Intellectual Prop...| Domain Purchase Fee|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.235567Z","level":"info","event":"|          2|Intellectual Prop...|Company Registrat...|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.238826Z","level":"info","event":"|          3|     Recurring Costs|ChatGPT Subscription|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.240094Z","level":"info","event":"|          4|           Marketing| Article Publish Fee|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.241532Z","level":"info","event":"|          5|     Office Expenses|     Office Supplies|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.242832Z","level":"info","event":"|          6|          Technology|     Website Hosting|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.245501Z","level":"info","event":"|          7|           Marketing|      Business Cards|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.247204Z","level":"info","event":"|          8|            Software| Accounting Software|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.249074Z","level":"info","event":"|          9|               Legal|  Legal Consultation|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.250662Z","level":"info","event":"|         10|           Insurance|   Insurance Premium|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.251892Z","level":"info","event":"|         11|Professional Deve...|Conference Regist...|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.336133Z","level":"info","event":"|         12|              Travel|     Travel Expenses|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.337737Z","level":"info","event":"|         13|              Travel| Hotel Accommodation|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.339729Z","level":"info","event":"|         14|              Travel|       Meal Expenses|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.342501Z","level":"info","event":"|         15|            Software|    Software License|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.346469Z","level":"info","event":"|         16|           Utilities|          Phone Bill|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.348427Z","level":"info","event":"|         17|           Utilities|    Internet Service|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.350014Z","level":"info","event":"|         18|           Utilities|    Electricity Bill|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.351769Z","level":"info","event":"|         19|           Utilities|          Water Bill|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.355481Z","level":"info","event":"|         20|     Office Expenses|   Cleaning Services|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.357883Z","level":"info","event":"+-----------+--------------------+--------------------+","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.359273Z","level":"info","event":"only showing top 20 rows","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.360472Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.361772Z","level":"info","event":"Showing all rows and columns in df_3:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.363625Z","level":"info","event":"+---------+--------------------+--------------------------+","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.366093Z","level":"info","event":"|VENDOR_ID|         VENDOR_NAME|VENDOR_CONTACT_INFORMATION|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.368495Z","level":"info","event":"+---------+--------------------+--------------------------+","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.370067Z","level":"info","event":"|        1|     Companies House|      enquiries@compani...|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.371768Z","level":"info","event":"|        2|             GoDaddy|      myrecruiter@godad...|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.373239Z","level":"info","event":"|        3|              OpenAI|        support@openai.com|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.375434Z","level":"info","event":"|        4|        Business Now|      enquiries@busines...|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.376922Z","level":"info","event":"|        5|             Staples|       support@staples.com|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.378755Z","level":"info","event":"|        6|            Bluehost|         help@bluehost.com|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.380131Z","level":"info","event":"|        7|          Vistaprint|      support@vistaprin...|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.381769Z","level":"info","event":"|        8|          QuickBooks|       help@quickbooks.com|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.384318Z","level":"info","event":"|        9|  Smith & Associates|         info@smithlaw.com|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.386643Z","level":"info","event":"|       10|            Allstate|      service@allstate.com|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.388197Z","level":"info","event":"|       11|        TechCon 2025|          info@techcon.com|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.391152Z","level":"info","event":"|       12|      Delta Airlines|      reservations@delt...|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.392706Z","level":"info","event":"|       13|            Marriott|      reservations@marr...|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.394063Z","level":"info","event":"|       14| Various Restaurants|      info@restaurants.com|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.395899Z","level":"info","event":"|       15|Adobe Creative Suite|         support@adobe.com|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.397554Z","level":"info","event":"|       16|             Verizon|       service@verizon.com|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.399316Z","level":"info","event":"|       17|             Comcast|       service@comcast.com|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.400895Z","level":"info","event":"|       18|      Local Power Co|      service@localpowe...|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.402386Z","level":"info","event":"|       19|     City Water Dept|      service@citywater...|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.404000Z","level":"info","event":"|       20|   CleanPro Services|         info@cleanpro.com|","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.405945Z","level":"info","event":"+---------+--------------------+--------------------------+","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.407468Z","level":"info","event":"only showing top 20 rows","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.409284Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:47.411093Z","level":"info","event":"Data uploaded successfully!","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:48.027789","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}
+{"timestamp":"2025-08-05T14:29:48.250566Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:48.252164Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:48.285356Z","level":"info","event":"Task operator:<Task(PythonOperator): run_python_etl>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T14:29:48.674233Z","level":"error","event":"\r[Stage 0:>                                                          (0 + 0) / 1]\r\r[Stage 0:>                                                          (0 + 1) / 1]\r\r                                                                                \r\r[Stage 2:>                                                          (0 + 1) / 1]\r\r                                                                                \r\r[Stage 3:>                                                          (0 + 1) / 1]\r\r                                                                                \r\r[Stage 4:>                                                          (0 + 1) / 1]","chan":"stderr","logger":"task"}

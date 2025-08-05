@@ -1,0 +1,144 @@
+{"timestamp":"2025-08-05T12:19:12.347239","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-08-05T12:19:12.348933","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/etl_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-08-05T12:19:15.690526Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:15.693444Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:15.696011Z","level":"info","event":"Current task name:run_python_etl","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:15.697746Z","level":"info","event":"Dag name:s3_to_snowflake_etl","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:29.727114Z","level":"error","event":"WARNING: An illegal reflective access operation has occurred","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:29.728501Z","level":"error","event":"WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/airflow/.local/lib/python3.12/site-packages/pyspark/jars/spark-unsafe_2.12-3.2.1.jar) to constructor java.nio.DirectByteBuffer(long,int)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:29.729612Z","level":"error","event":"WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:29.730427Z","level":"error","event":"WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:29.731447Z","level":"error","event":"WARNING: All illegal access operations will be denied in a future release","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:30.312381Z","level":"error","event":"Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:30.313663Z","level":"error","event":"Setting default log level to \"WARN\".","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:30.314708Z","level":"error","event":"To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:31.021681Z","level":"error","event":"25/08/05 12:19:31 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.711702Z","level":"error","event":"Traceback (most recent call last):","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.740834Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/serializers.py\", line 437, in dumps","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.741604Z","level":"error","event":"    return cloudpickle.dumps(obj, pickle_protocol)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.742385Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.742944Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/cloudpickle/cloudpickle_fast.py\", line 73, in dumps","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.743472Z","level":"error","event":"    cp.dump(obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.744094Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/cloudpickle/cloudpickle_fast.py\", line 563, in dump","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.744555Z","level":"error","event":"    return Pickler.dump(self, obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.744930Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.745429Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/cloudpickle/cloudpickle_fast.py\", line 653, in reducer_override","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.745822Z","level":"error","event":"    return self._function_reduce(obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.746167Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.746517Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/cloudpickle/cloudpickle_fast.py\", line 526, in _function_reduce","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.747154Z","level":"error","event":"    return self._dynamic_function_reduce(obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.747894Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.748528Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/cloudpickle/cloudpickle_fast.py\", line 507, in _dynamic_function_reduce","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.749150Z","level":"error","event":"    state = _function_getstate(func)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.749760Z","level":"error","event":"            ^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.750605Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/cloudpickle/cloudpickle_fast.py\", line 157, in _function_getstate","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.751664Z","level":"error","event":"    f_globals_ref = _extract_code_globals(func.__code__)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.752452Z","level":"error","event":"                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.753345Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/cloudpickle/cloudpickle.py\", line 236, in _extract_code_globals","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.753993Z","level":"error","event":"    out_names = {names[oparg] for _, oparg in _walk_global_ops(co)}","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.754510Z","level":"error","event":"                 ~~~~~^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.754958Z","level":"error","event":"IndexError: tuple index out of range","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.755400Z","level":"error","event":"Traceback (most recent call last):","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.755838Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/serializers.py\", line 437, in dumps","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.756535Z","level":"error","event":"    return cloudpickle.dumps(obj, pickle_protocol)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.757142Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.758059Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/cloudpickle/cloudpickle_fast.py\", line 73, in dumps","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.759404Z","level":"error","event":"    cp.dump(obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.760021Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/cloudpickle/cloudpickle_fast.py\", line 563, in dump","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.760746Z","level":"error","event":"    return Pickler.dump(self, obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.761519Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.762423Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/cloudpickle/cloudpickle_fast.py\", line 653, in reducer_override","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.763226Z","level":"error","event":"    return self._function_reduce(obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.763960Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.764567Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/cloudpickle/cloudpickle_fast.py\", line 526, in _function_reduce","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.765172Z","level":"error","event":"    return self._dynamic_function_reduce(obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.765769Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.766367Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/cloudpickle/cloudpickle_fast.py\", line 507, in _dynamic_function_reduce","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.766973Z","level":"error","event":"    state = _function_getstate(func)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.767588Z","level":"error","event":"            ^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.768199Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/cloudpickle/cloudpickle_fast.py\", line 157, in _function_getstate","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.768817Z","level":"error","event":"    f_globals_ref = _extract_code_globals(func.__code__)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.769276Z","level":"error","event":"                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.769720Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/cloudpickle/cloudpickle.py\", line 236, in _extract_code_globals","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.770235Z","level":"error","event":"    out_names = {names[oparg] for _, oparg in _walk_global_ops(co)}","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.770901Z","level":"error","event":"                 ~~~~~^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.771815Z","level":"error","event":"IndexError: tuple index out of range","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.772632Z","level":"error","event":"","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.773540Z","level":"error","event":"During handling of the above exception, another exception occurred:","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.774462Z","level":"error","event":"","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.775220Z","level":"error","event":"Traceback (most recent call last):","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.776013Z","level":"error","event":"  File \"/opt/airflow/python/app.py\", line 169, in <module>","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.776669Z","level":"error","event":"    spark_df_1 = spark.createDataFrame(df_1, schema=schema_df_1)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.777294Z","level":"error","event":"                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.778149Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/sql/session.py\", line 673, in createDataFrame","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.779040Z","level":"error","event":"    return super(SparkSession, self).createDataFrame(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.779921Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.780788Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/sql/pandas/conversion.py\", line 340, in createDataFrame","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.781867Z","level":"info","event":"PySpark version: 3.2.1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.782823Z","level":"info","event":"Columns: ['expense_id', 'date_of_expense', 'cost', 'category_id', 'vendor_id']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.783626Z","level":"info","event":"Data types:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.784303Z","level":"info","event":" expense_id           int64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.784955Z","level":"info","event":"date_of_expense     object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.785690Z","level":"info","event":"cost               float64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.786344Z","level":"info","event":"category_id          int64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.786927Z","level":"info","event":"vendor_id            int64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.787438Z","level":"info","event":"dtype: object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.787869Z","level":"info","event":"First 5 rows:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.788375Z","level":"info","event":"    expense_id date_of_expense   cost  category_id  vendor_id","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.788889Z","level":"info","event":"0           1      2025-05-30   7.29            1          1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.789394Z","level":"info","event":"1           2      2025-05-30  50.00            2          2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.789836Z","level":"info","event":"2           3      2026-05-13  20.00            3          3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.790478Z","level":"info","event":"3           4      2025-07-23  22.13            4          4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.791225Z","level":"info","event":"4           5      2025-06-15  45.67            5          5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.792144Z","level":"info","event":"Columns: ['category_id', 'category_type', 'expense_name']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.793138Z","level":"info","event":"Data types:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.793930Z","level":"info","event":" category_id       int64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.794747Z","level":"info","event":"category_type    object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.795577Z","level":"info","event":"expense_name     object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.796743Z","level":"info","event":"dtype: object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.797384Z","level":"info","event":"First 5 rows:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.798037Z","level":"info","event":"    category_id          category_type              expense_name","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.798835Z","level":"info","event":"0            1  Intellectual Property       Domain Purchase Fee","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.799887Z","level":"info","event":"1            2  Intellectual Property  Company Registration Fee","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.800765Z","level":"info","event":"2            3        Recurring Costs      ChatGPT Subscription","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.802059Z","level":"info","event":"3            4              Marketing       Article Publish Fee","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.803585Z","level":"info","event":"4            5        Office Expenses           Office Supplies","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.804507Z","level":"info","event":"Columns: ['vendor_id', 'vendor_name', 'vendor_contact_information']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.805559Z","level":"info","event":"Data types:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.806403Z","level":"info","event":" vendor_id                      int64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.807371Z","level":"info","event":"vendor_name                   object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.808187Z","level":"info","event":"vendor_contact_information    object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.809223Z","level":"info","event":"dtype: object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.810124Z","level":"info","event":"First 5 rows:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.810988Z","level":"info","event":"    vendor_id      vendor_name       vendor_contact_information","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.811665Z","level":"info","event":"0          1  Companies House  enquiries@companieshouse.gov.uk","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.812577Z","level":"info","event":"1          2          GoDaddy          myrecruiter@godaddy.com","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.813251Z","level":"info","event":"2          3           OpenAI               support@openai.com","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.813795Z","level":"info","event":"3          4     Business Now     enquiries@business-now.co.uk","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.814216Z","level":"info","event":"4          5          Staples              support@staples.com","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.814620Z","level":"info","event":"Showing all rows and columns in df_1:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.815209Z","level":"error","event":"    return self._create_dataframe(data, schema, samplingRatio, verifySchema)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.815743Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.816334Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/sql/session.py\", line 701, in _create_dataframe","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.817153Z","level":"error","event":"    jrdd = self._jvm.SerDeUtil.toJavaArray(rdd._to_java_object_rdd())","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.817789Z","level":"error","event":"                                           ^^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.818289Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/rdd.py\", line 2620, in _to_java_object_rdd","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.818752Z","level":"error","event":"    return self.ctx._jvm.SerDeUtil.pythonToJava(rdd._jrdd, True)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.819203Z","level":"error","event":"                                                ^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.819657Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/rdd.py\", line 2951, in _jrdd","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.820105Z","level":"error","event":"    wrapped_func = _wrap_function(self.ctx, self.func, self._prev_jrdd_deserializer,","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.820936Z","level":"error","event":"                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.821721Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/rdd.py\", line 2830, in _wrap_function","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.822391Z","level":"error","event":"    pickled_command, broadcast_vars, env, includes = _prepare_for_python_RDD(sc, command)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.823015Z","level":"error","event":"                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.823615Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/rdd.py\", line 2816, in _prepare_for_python_RDD","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.824165Z","level":"error","event":"    pickled_command = ser.dumps(command)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.824629Z","level":"error","event":"                      ^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.825073Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/serializers.py\", line 447, in dumps","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.825495Z","level":"error","event":"    raise pickle.PicklingError(msg)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:35.825904Z","level":"error","event":"_pickle.PicklingError: Could not serialize object: IndexError: tuple index out of range","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T12:19:36.186014","level":"error","event":"Task failed with exception","logger":"task","error_detail":[{"exc_type":"CalledProcessError","exc_value":"Command '['python', '/opt/airflow/python/app.py']' returned non-zero exit status 1.","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":877,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1164,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":397,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":217,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":240,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":81,"name":"run"},{"filename":"/opt/airflow/dags/etl_dag.py","lineno":9,"name":"run_etl_script"},{"filename":"/usr/local/lib/python3.12/subprocess.py","lineno":571,"name":"run"}],"is_group":false,"exceptions":[]}]}
+{"timestamp":"2025-08-05T12:19:36.189514Z","level":"info","event":"Task instance in failure state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:36.190853Z","level":"info","event":"Task start","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:36.191949Z","level":"info","event":"Task:<Task(PythonOperator): run_python_etl>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T12:19:36.192882Z","level":"info","event":"Failure caused by Command '['python', '/opt/airflow/python/app.py']' returned non-zero exit status 1.","chan":"stdout","logger":"task"}

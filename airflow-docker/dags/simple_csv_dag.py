@@ -64,7 +64,7 @@ def process_csv_data():
         print(f"Could not read from S3: {e}")
         print("Reading from local file instead...")
         # Fallback to local file
-        with open('/opt/airflow/dags/../../sample_data.csv', 'r', encoding='utf-8') as file:
+        with open('/opt/airflow/sample_data.csv', 'r', encoding='utf-8') as file:
             body = file.read()
         print("Successfully read CSV from local file")
     

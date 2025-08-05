@@ -1,0 +1,71 @@
+{"timestamp":"2025-08-05T10:30:14.904496","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-08-05T10:30:14.906509","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/etl_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-08-05T10:30:15.801669Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:15.802786Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:15.803382Z","level":"info","event":"Current task name:run_python_etl","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:15.804020Z","level":"info","event":"Dag name:s3_to_snowflake_etl","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.838039Z","level":"error","event":"JAVA_HOME is not set","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.924869Z","level":"info","event":"PySpark version: 3.2.1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.925745Z","level":"info","event":"Columns: ['expense_id', 'date_of_expense', 'cost', 'category_id', 'vendor_id']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.926626Z","level":"info","event":"Data types:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.927480Z","level":"info","event":" expense_id           int64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.928337Z","level":"info","event":"date_of_expense     object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.929217Z","level":"info","event":"cost               float64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.930192Z","level":"info","event":"category_id          int64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.931151Z","level":"info","event":"vendor_id            int64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.932144Z","level":"info","event":"dtype: object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.932824Z","level":"info","event":"First 5 rows:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.933926Z","level":"info","event":"    expense_id date_of_expense   cost  category_id  vendor_id","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.934679Z","level":"info","event":"0           1      2025-05-30   7.29            1          1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.935242Z","level":"info","event":"1           2      2025-05-30  50.00            2          2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.935983Z","level":"info","event":"2           3      2026-05-13  20.00            3          3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.936576Z","level":"info","event":"3           4      2025-07-23  22.13            4          4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.937267Z","level":"info","event":"4           5      2025-06-15  45.67            5          5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.937796Z","level":"info","event":"Columns: ['category_id', 'category_type', 'expense_name']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.938440Z","level":"info","event":"Data types:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.939074Z","level":"info","event":" category_id       int64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.939655Z","level":"info","event":"category_type    object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.940227Z","level":"info","event":"expense_name     object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.940769Z","level":"info","event":"dtype: object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.941229Z","level":"info","event":"First 5 rows:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.941769Z","level":"info","event":"    category_id          category_type              expense_name","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.942419Z","level":"info","event":"0            1  Intellectual Property       Domain Purchase Fee","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.942861Z","level":"info","event":"1            2  Intellectual Property  Company Registration Fee","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.943224Z","level":"info","event":"2            3        Recurring Costs      ChatGPT Subscription","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.943646Z","level":"info","event":"3            4              Marketing       Article Publish Fee","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.944097Z","level":"info","event":"4            5        Office Expenses           Office Supplies","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.944592Z","level":"info","event":"Columns: ['vendor_id', 'vendor_name', 'vendor_contact_information']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.945107Z","level":"info","event":"Data types:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.945455Z","level":"info","event":" vendor_id                      int64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.945921Z","level":"info","event":"vendor_name                   object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.946649Z","level":"info","event":"vendor_contact_information    object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.947374Z","level":"info","event":"dtype: object","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.948025Z","level":"info","event":"First 5 rows:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.948562Z","level":"info","event":"    vendor_id      vendor_name       vendor_contact_information","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.949138Z","level":"info","event":"0          1  Companies House  enquiries@companieshouse.gov.uk","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.949749Z","level":"info","event":"1          2          GoDaddy          myrecruiter@godaddy.com","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.950435Z","level":"info","event":"2          3           OpenAI               support@openai.com","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.951041Z","level":"info","event":"3          4     Business Now     enquiries@business-now.co.uk","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.951580Z","level":"info","event":"4          5          Staples              support@staples.com","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.952075Z","level":"error","event":"Traceback (most recent call last):","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.952613Z","level":"error","event":"  File \"/opt/airflow/python/app.py\", line 138, in <module>","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.953125Z","level":"error","event":"    .getOrCreate()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.953733Z","level":"error","event":"     ^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.954286Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/sql/session.py\", line 228, in getOrCreate","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.955039Z","level":"error","event":"    sc = SparkContext.getOrCreate(sparkConf)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.955817Z","level":"error","event":"         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.956519Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/context.py\", line 392, in getOrCreate","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.957320Z","level":"error","event":"    SparkContext(conf=conf or SparkConf())","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.958064Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/context.py\", line 144, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.958807Z","level":"error","event":"    SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.959489Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/context.py\", line 339, in _ensure_initialized","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.960275Z","level":"error","event":"    SparkContext._gateway = gateway or launch_gateway(conf)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.960986Z","level":"error","event":"                                       ^^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.961760Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/pyspark/java_gateway.py\", line 108, in launch_gateway","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.962556Z","level":"error","event":"    raise RuntimeError(\"Java gateway process exited before sending its port number\")","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:20.963026Z","level":"error","event":"RuntimeError: Java gateway process exited before sending its port number","chan":"stderr","logger":"task"}
+{"timestamp":"2025-08-05T10:30:21.211796","level":"error","event":"Task failed with exception","logger":"task","error_detail":[{"exc_type":"CalledProcessError","exc_value":"Command '['python', '/opt/airflow/python/app.py']' returned non-zero exit status 1.","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":877,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1164,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":397,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":217,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":240,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":81,"name":"run"},{"filename":"/opt/airflow/dags/etl_dag.py","lineno":9,"name":"run_etl_script"},{"filename":"/usr/local/lib/python3.12/subprocess.py","lineno":571,"name":"run"}],"is_group":false,"exceptions":[]}]}
+{"timestamp":"2025-08-05T10:30:21.214067Z","level":"info","event":"Task instance in failure state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:21.214532Z","level":"info","event":"Task start","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:21.214972Z","level":"info","event":"Task:<Task(PythonOperator): run_python_etl>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-05T10:30:21.215355Z","level":"info","event":"Failure caused by Command '['python', '/opt/airflow/python/app.py']' returned non-zero exit status 1.","chan":"stdout","logger":"task"}
