@@ -2,14 +2,21 @@
 
 This project implements a data pipeline infrastructure using Terraform, AWS, and Snowflake to process and analyse pre-operating expenses financial data. The solution provides automated infrastructure provisioning, data processing with PySpark, and cloud-based data warehousing, Snowflake to extract financial analytics using SQL.
 
+## Visualisations
+
+This is a sample dashboard using `sample-data` in the sample-data folder
+
+1. **Total Expenses per Category**  
+   ![Total Expenses per Category](powerbi-dashboard/powerbi_dashboard.pdf)
+
 ## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
+- [Sample Data Analysis](#sample-data-analysis)
 - [Technology Stack](#technology-stack)
 - [Quick Start Guide](#quick-start-guide)
 - [Implementation Details](#implementation-details)
-- [Sample Data Analysis](#sample-data-analysis)
 - [Key Insights](#key-insights)
 - [Challenges and Solutions](#challenges-and-solutions)
 - [Impact](#impact)
@@ -30,6 +37,152 @@ The pipeline handles financial data from CSV files, transforms it into normalise
 - **Environment Management**: Virtual environment setup with dependency management
 - **SQL Analytics**: Pre-built queries for expense analysis and reporting
 
+## Sample Data Analysis
+
+### Sample Data Structure
+
+The pipeline processes CSV data with the following structure:
+- **Pre Operating Expense**: Description of the expense
+- **Date of Expense**: Date when expense occurred
+- **Cost**: Amount in currency
+- **Vendor**: Company providing the service
+- **Category**: Expense category (Marketing, Technology, Legal, etc.)
+- **Contact Info**: Vendor contact information
+
+### Database Schema
+
+The pipeline creates three normalised tables in Snowflake:
+
+1. **EXPENSES**: Core expense records with IDs and amounts
+2. **CATEGORIES**: Expense categories and descriptions
+3. **VENDORS**: Vendor information and contact details
+
+### Running SQL Queries
+
+Connect to Snowflake and run the following queries for insights:
+
+#### 1. Total Expenses per Category
+
+```sql
+SELECT 
+    SUM(e.cost) AS TOTAL_AMOUNT,
+    c.category_type
+FROM expenses e
+JOIN categories c ON e.category_id = c.category_id
+GROUP BY c.category_type
+ORDER BY TOTAL_AMOUNT DESC;
+```
+
+**Example Output:**
+| TOTAL_AMOUNT | CATEGORY_TYPE |
+|--------------|---------------|
+| $5,234.56    | Marketing     |
+| $3,456.78    | Technology    |
+| $2,890.12    | Legal         |
+| $1,567.89    | Office Expenses |
+| $987.65      | Insurance     |
+
+**Total Expenses per Category**  
+   ![Total Expenses per Category](visualisations/total_expenses_per_category.png)
+
+#### 2. Monthly Expense Trends
+
+```sql
+SELECT 
+    MONTHNAME(e.date_of_expense) AS MONTH,
+    YEAR(e.date_of_expense) AS YEAR,
+    SUM(e.cost) AS TOTAL_AMOUNT,
+    c.category_type
+FROM expenses e
+JOIN categories c ON e.category_id = c.category_id
+GROUP BY c.category_type, MONTHNAME(e.date_of_expense), YEAR(e.date_of_expense)
+ORDER BY YEAR, MONTH, TOTAL_AMOUNT DESC;
+```
+
+**Example Output:**
+| MONTH | YEAR | TOTAL_AMOUNT | CATEGORY_TYPE |
+|-------|------|--------------|---------------|
+| May   | 2025 | $57.29       | Intellectual Property |
+| June  | 2025 | $1,234.56    | Technology    |
+| July  | 2025 | $2,345.67    | Marketing     |
+| August| 2025 | $3,456.78    | Marketing     |
+
+**Monthly Expense Trends**  
+   ![Monthly Expense Trends](visualisations/total_expenses_per_category_per_month.png)
+
+
+#### 3. Historical expenses time series
+
+```sql
+select 
+    e.cost,
+    e.date_of_expense
+from 
+    expenses e;
+```
+
+**Example Output:**
+| MONTH | YEAR | TOTAL_AMOUNT |
+|-------|------|--------------|
+| May   | 2025 | 57.29       |
+| June  | 2025 | 1,234.56    |
+| July  | 2025 | 2,345.67    |
+| August| 2025 | 3,456.78    |
+
+**Historical Expense Data**  
+   ![Historical Expense Data](visualisations/historical_expense_data.png)
+
+#### 4. Category with highest total cost per month at N year
+
+```sql
+with monthly_totals as (
+    select 
+        monthname(e.date_of_expense) as MONTH,
+        year(e.date_of_expense) as YEAR,
+        sum(e.cost) as TOTAL_AMOUNT,
+        c.category_type
+    from
+        expenses e
+    join categories c on e.category_id = c.category_id
+    group by c.category_type, monthname(e.date_of_expense), year(e.date_of_expense)
+),
+ranked_1 as (
+    select 
+        month,
+        year,
+        category_type,
+        total_amount,
+        row_number() over (
+            partition by year, month
+            order by total_amount desc
+        ) as rn_1
+    from monthly_totals
+    where year = 2025
+)
+
+select
+    month,
+    year,
+    total_amount,
+    category_type
+from ranked_1
+where rn_1 = 1
+order by year, month;
+```
+
+**Example Output:**
+| YEAR | TOTAL_AMOUNT | CATEGORY_TYPE |
+|------|--------------|---------------|
+| 2025 | $4,567.89    | Marketing     |
+| 2026 | $6,789.12    | Technology    |
+
+
+**Category Analysis Summary**  
+   ![Category Analysis Summary](visualisations/total_expenses_per_category_per_month_summary.png)
+
+**Monthly Expense Trends**  
+   ![Monthly Expense Trends](visualisations/total_expenses_per_category_per_month.png)
+
 ## Technology Stack
 
 | Component            | Tools and Libraries                       |
@@ -40,6 +193,7 @@ The pipeline handles financial data from CSV files, transforms it into normalise
 | Data Storage         | CSV files, Snowflake Data Warehouse       |
 | Development          | Python virtual environment, requirements.txt |
 | Version Control      | Git                                        |
+
 
 ## Quick Start Guide
 
@@ -108,128 +262,6 @@ terraform apply
 cd python
 python app.py
 ```
-
-## Sample Data Analysis
-
-### Sample Data Structure
-
-The pipeline processes CSV data with the following structure:
-- **Pre Operating Expense**: Description of the expense
-- **Date of Expense**: Date when expense occurred
-- **Cost**: Amount in currency
-- **Vendor**: Company providing the service
-- **Category**: Expense category (Marketing, Technology, Legal, etc.)
-- **Contact Info**: Vendor contact information
-
-### Database Schema
-
-The pipeline creates three normalized tables in Snowflake:
-
-1. **EXPENSES**: Core expense records with IDs and amounts
-2. **CATEGORIES**: Expense categories and descriptions
-3. **VENDORS**: Vendor information and contact details
-
-### Running SQL Queries
-
-Connect to Snowflake and run the following queries for insights:
-
-#### 1. Total Expenses per Category
-
-```sql
-SELECT 
-    SUM(e.cost) AS TOTAL_AMOUNT,
-    c.category_type
-FROM expenses e
-JOIN categories c ON e.category_id = c.category_id
-GROUP BY c.category_type
-ORDER BY TOTAL_AMOUNT DESC;
-```
-
-**Example Output:**
-| TOTAL_AMOUNT | CATEGORY_TYPE |
-|--------------|---------------|
-| $5,234.56    | Marketing     |
-| $3,456.78    | Technology    |
-| $2,890.12    | Legal         |
-| $1,567.89    | Office Expenses |
-| $987.65      | Insurance     |
-
-#### 2. Monthly Expense Trends
-
-```sql
-SELECT 
-    MONTHNAME(e.date_of_expense) AS MONTH,
-    YEAR(e.date_of_expense) AS YEAR,
-    SUM(e.cost) AS TOTAL_AMOUNT,
-    c.category_type
-FROM expenses e
-JOIN categories c ON e.category_id = c.category_id
-GROUP BY c.category_type, MONTHNAME(e.date_of_expense), YEAR(e.date_of_expense)
-ORDER BY YEAR, MONTH, TOTAL_AMOUNT DESC;
-```
-
-**Example Output:**
-| MONTH | YEAR | TOTAL_AMOUNT | CATEGORY_TYPE |
-|-------|------|--------------|---------------|
-| May   | 2025 | $57.29       | Intellectual Property |
-| June  | 2025 | $1,234.56    | Technology    |
-| July  | 2025 | $2,345.67    | Marketing     |
-| August| 2025 | $3,456.78    | Marketing     |
-
-#### 3. Top Expense Categories by Year
-
-```sql
-WITH year_totals AS (
-    SELECT 
-        YEAR(e.date_of_expense) AS YEAR,
-        SUM(e.cost) AS TOTAL_AMOUNT,
-        c.category_type
-    FROM expenses e
-    JOIN categories c ON e.category_id = c.category_id
-    GROUP BY c.category_type, YEAR(e.date_of_expense)
-),
-ranked AS (
-    SELECT 
-        year,
-        category_type,
-        total_amount,
-        ROW_NUMBER() OVER (
-            PARTITION BY year
-            ORDER BY total_amount DESC
-        ) AS rn
-    FROM year_totals
-)
-SELECT
-    year,
-    total_amount,
-    category_type
-FROM ranked
-WHERE rn = 1
-ORDER BY year;
-```
-
-**Example Output:**
-| YEAR | TOTAL_AMOUNT | CATEGORY_TYPE |
-|------|--------------|---------------|
-| 2025 | $4,567.89    | Marketing     |
-| 2026 | $6,789.12    | Technology    |
-
-### Visualisations
-
-The pipeline generates several visualizations from the sample data:
-
-1. **Total Expenses per Category**  
-   ![Total Expenses per Category](visualisations/total_expenses_per_category.png)
-
-2. **Monthly Expense Trends**  
-   ![Monthly Expense Trends](visualisations/total_expenses_per_category_per_month.png)
-
-3. **Historical Expense Data**  
-   ![Historical Expense Data](visualisations/historical_expense_data.png)
-
-4. **Category Analysis Summary**  
-   ![Category Analysis Summary](visualisations/total_expenses_per_category_per_month_summary.png)
-
 
 ## Implementation Details
 
