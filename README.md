@@ -7,7 +7,9 @@ This project implements a data pipeline infrastructure using Terraform, AWS, and
 - [Overview](#overview)
 - [Features](#features)
 - [Technology Stack](#technology-stack)
+- [Quick Start Guide](#quick-start-guide)
 - [Implementation Details](#implementation-details)
+- [Sample Data Analysis](#sample-data-analysis)
 - [Key Insights](#key-insights)
 - [Challenges and Solutions](#challenges-and-solutions)
 - [Impact](#impact)
@@ -38,6 +40,199 @@ The pipeline handles financial data from CSV files, transforms it into normalise
 | Data Storage         | CSV files, Snowflake Data Warehouse       |
 | Development          | Python virtual environment, requirements.txt |
 | Version Control      | Git                                        |
+
+## Quick Start Guide
+
+### Prerequisites
+
+- Python 3.8+
+- Terraform
+- AWS CLI configured
+- Snowflake account
+- Git
+
+### 1. Clone and Setup Repository
+
+```bash
+git clone <your-repository-url>
+cd terraform-setup
+```
+
+### 2. Create Virtual Environment
+
+```bash
+python -m venv venv
+# On Windows
+venv\Scripts\activate
+# On Linux/Mac
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Environment Configuration
+
+Create a `.env` file in the root directory with your credentials:
+
+```bash
+# AWS Credentials
+AWS_ACCESS_KEY_ID=your_aws_access_key
+AWS_SECRET_ACCESS_KEY=your_aws_secret_key
+AWS_REGION=your_aws_region
+AWS_S3_BUCKET=pre-operating-expenses-data
+
+# Snowflake Credentials
+SNOWFLAKE_USER=your_snowflake_username
+SNOWFLAKE_PASSWORD=your_snowflake_password
+SNOWFLAKE_ACCOUNT=your_snowflake_account
+SNOWFLAKE_WAREHOUSE=data_warehouse_2
+SNOWFLAKE_SCHEMA=expense_data_sample
+```
+
+### 5. Deploy Infrastructure
+
+```bash
+cd terraform
+terraform init
+terraform plan
+terraform apply
+```
+
+### 6. Run Data Pipeline
+
+```bash
+cd python
+python app.py
+```
+
+## Sample Data Analysis
+
+### Sample Data Structure
+
+The pipeline processes CSV data with the following structure:
+- **Pre Operating Expense**: Description of the expense
+- **Date of Expense**: Date when expense occurred
+- **Cost**: Amount in currency
+- **Vendor**: Company providing the service
+- **Category**: Expense category (Marketing, Technology, Legal, etc.)
+- **Contact Info**: Vendor contact information
+
+### Database Schema
+
+The pipeline creates three normalized tables in Snowflake:
+
+1. **EXPENSES**: Core expense records with IDs and amounts
+2. **CATEGORIES**: Expense categories and descriptions
+3. **VENDORS**: Vendor information and contact details
+
+### Running SQL Queries
+
+Connect to Snowflake and run the following queries for insights:
+
+#### 1. Total Expenses per Category
+
+```sql
+SELECT 
+    SUM(e.cost) AS TOTAL_AMOUNT,
+    c.category_type
+FROM expenses e
+JOIN categories c ON e.category_id = c.category_id
+GROUP BY c.category_type
+ORDER BY TOTAL_AMOUNT DESC;
+```
+
+**Example Output:**
+| TOTAL_AMOUNT | CATEGORY_TYPE |
+|--------------|---------------|
+| $5,234.56    | Marketing     |
+| $3,456.78    | Technology    |
+| $2,890.12    | Legal         |
+| $1,567.89    | Office Expenses |
+| $987.65      | Insurance     |
+
+#### 2. Monthly Expense Trends
+
+```sql
+SELECT 
+    MONTHNAME(e.date_of_expense) AS MONTH,
+    YEAR(e.date_of_expense) AS YEAR,
+    SUM(e.cost) AS TOTAL_AMOUNT,
+    c.category_type
+FROM expenses e
+JOIN categories c ON e.category_id = c.category_id
+GROUP BY c.category_type, MONTHNAME(e.date_of_expense), YEAR(e.date_of_expense)
+ORDER BY YEAR, MONTH, TOTAL_AMOUNT DESC;
+```
+
+**Example Output:**
+| MONTH | YEAR | TOTAL_AMOUNT | CATEGORY_TYPE |
+|-------|------|--------------|---------------|
+| May   | 2025 | $57.29       | Intellectual Property |
+| June  | 2025 | $1,234.56    | Technology    |
+| July  | 2025 | $2,345.67    | Marketing     |
+| August| 2025 | $3,456.78    | Marketing     |
+
+#### 3. Top Expense Categories by Year
+
+```sql
+WITH year_totals AS (
+    SELECT 
+        YEAR(e.date_of_expense) AS YEAR,
+        SUM(e.cost) AS TOTAL_AMOUNT,
+        c.category_type
+    FROM expenses e
+    JOIN categories c ON e.category_id = c.category_id
+    GROUP BY c.category_type, YEAR(e.date_of_expense)
+),
+ranked AS (
+    SELECT 
+        year,
+        category_type,
+        total_amount,
+        ROW_NUMBER() OVER (
+            PARTITION BY year
+            ORDER BY total_amount DESC
+        ) AS rn
+    FROM year_totals
+)
+SELECT
+    year,
+    total_amount,
+    category_type
+FROM ranked
+WHERE rn = 1
+ORDER BY year;
+```
+
+**Example Output:**
+| YEAR | TOTAL_AMOUNT | CATEGORY_TYPE |
+|------|--------------|---------------|
+| 2025 | $4,567.89    | Marketing     |
+| 2026 | $6,789.12    | Technology    |
+
+### Visualizations
+
+The pipeline generates several visualizations from the sample data:
+
+1. **Total Expenses per Category** (`total_expenses_per_category.png`)
+   - Bar chart showing expense distribution across categories
+   - Marketing and Technology typically have the highest costs
+
+2. **Monthly Expense Trends** (`total_expenses_per_category_per_month.png`)
+   - Line chart showing expense trends over time
+   - Helps identify seasonal spending patterns
+
+3. **Historical Expense Data** (`historical_expense_data.png`)
+   - Time series analysis of all expenses
+   - Useful for budget planning and forecasting
+
+4. **Category Analysis Summary** (`total_expenses_per_category_per_month_summary.png`)
+   - Heatmap showing category performance by month
+   - Comprehensive view of spending patterns
 
 ## Implementation Details
 
@@ -93,3 +288,30 @@ This project demonstrates modern data engineering practices by combining Infrast
 - Scale processing capabilities based on business needs
 
 The solution reduces operational overhead while providing a robust platform for financial data analysis and reporting.
+
+## Troubleshooting
+
+### Common Issues
+
+1. **PySpark Environment**: Ensure Python paths are correctly set in your virtual environment
+2. **AWS Credentials**: Verify your `.env` file contains valid AWS credentials
+3. **Snowflake Connection**: Check network connectivity and credential validity
+4. **Dependencies**: Ensure all packages are installed in your virtual environment
+
+### Getting Help
+
+- Check the logs in the `airflow-docker/logs/` directory for detailed error information
+- Verify your environment variables are correctly set
+- Ensure your Snowflake warehouse is running and accessible
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
