@@ -2,7 +2,7 @@
 
 This project implements a data pipeline infrastructure using Terraform, AWS, and Snowflake to process and analyse pre-operating expenses financial data. The solution provides automated infrastructure provisioning, data processing with PySpark, and cloud-based data warehousing, Snowflake to extract financial analytics using SQL.
 
-## Visualisations
+## Example Data Visualisation
 
 This is a sample dashboard using `sample-data` in the sample-data folder
 
@@ -81,9 +81,8 @@ ORDER BY TOTAL_AMOUNT DESC;
 | $2,890.12    | Legal         |
 | $1,567.89    | Office Expenses |
 | $987.65      | Insurance     |
-
-**Total Expenses per Category**  
-   ![Total Expenses per Category](visualisations/total_expenses_per_category.png)
+ 
+![Total Expenses per Category](visualisations/total_expenses_per_category.png)
 
 #### 2. Monthly Expense Trends
 
@@ -107,8 +106,8 @@ ORDER BY YEAR, MONTH, TOTAL_AMOUNT DESC;
 | July  | 2025 | $2,345.67    | Marketing     |
 | August| 2025 | $3,456.78    | Marketing     |
 
-**Monthly Expense Trends**  
-   ![Monthly Expense Trends](visualisations/total_expenses_per_category_per_month.png)
+
+![Monthly Expense Trends](visualisations/total_expenses_per_category_per_month.png)
 
 
 #### 3. Historical expenses time series
@@ -129,8 +128,8 @@ from
 | July  | 2025 | 2,345.67    |
 | August| 2025 | 3,456.78    |
 
-**Historical Expense Data**  
-   ![Historical Expense Data](visualisations/historical_expense_data.png)
+
+![Historical Expense Data](visualisations/historical_expense_data.png)
 
 #### 4. Category with highest total cost per month at N year
 
@@ -177,11 +176,10 @@ order by year, month;
 | 2026 | $6,789.12    | Technology    |
 
 
-**Category Analysis Summary**  
-   ![Category Analysis Summary](visualisations/total_expenses_per_category_per_month_summary.png)
 
-**Monthly Expense Trends**  
-   ![Monthly Expense Trends](visualisations/total_expenses_per_category_per_month.png)
+![Category Analysis Summary](visualisations/total_expenses_per_category_per_month_summary.png)
+
+![Monthly Expense Trends](visualisations/total_expenses_per_category_per_month.png)
 
 ## Technology Stack
 
@@ -271,7 +269,7 @@ python app.py
   - Multi-provider setup for AWS and Databricks integration
   
 - **Data Processing Pipeline**:
-  - PySpark session initialization with custom Python environment
+  - PySpark session initialisation with custom Python environment
   - CSV data extraction from S3 using boto3
   - Data transformation into three normalised tables: expenses, categories, vendors
   - Automated data type conversion and column mapping
@@ -292,7 +290,7 @@ python app.py
 |------------------------------|-----------------------------------------------------------|
 | S3 Data Storage              | Automated bucket provisioning with file upload validation |
 | PySpark Processing           | 3.2.1 version with custom Python environment configuration |
-| Data Normalization           | Three-table schema: expenses, categories, vendors         |
+| Data Normalisation           | Three-table schema: expenses, categories, vendors         |
 | Snowflake Integration        | XSMALL warehouse with auto-suspend/resume capabilities    |
 | Infrastructure Automation    | Complete IaC setup with Terraform state management        |
 
@@ -312,7 +310,7 @@ This project demonstrates modern data engineering practices by combining Infrast
 
 - Automate infrastructure provisioning and reduce manual setup time
 - Process large volumes of financial data efficiently with PySpark
-- Maintain data integrity through normalized database design
+- Maintain data integrity through normalised database design
 - Enable real-time analytics with cloud-based data warehousing
 - Scale processing capabilities based on business needs
 
