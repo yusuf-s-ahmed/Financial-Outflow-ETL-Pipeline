@@ -218,19 +218,19 @@ ORDER BY year;
 
 The pipeline generates several visualizations from the sample data:
 
-1. **Total Expenses per Category** (`total_expenses_per_category.png`)
+1. **Total Expenses per Category** (`sample-data/total_expenses_per_category.png`)
    - Bar chart showing expense distribution across categories
    - Marketing and Technology typically have the highest costs
 
-2. **Monthly Expense Trends** (`total_expenses_per_category_per_month.png`)
+2. **Monthly Expense Trends** (`sample-data/total_expenses_per_category_per_month.png`)
    - Line chart showing expense trends over time
    - Helps identify seasonal spending patterns
 
-3. **Historical Expense Data** (`historical_expense_data.png`)
+3. **Historical Expense Data** (`sample-data/historical_expense_data.png`)
    - Time series analysis of all expenses
    - Useful for budget planning and forecasting
 
-4. **Category Analysis Summary** (`total_expenses_per_category_per_month_summary.png`)
+4. **Category Analysis Summary** (`sample-data/total_expenses_per_category_per_month_summary.png`)
    - Heatmap showing category performance by month
    - Comprehensive view of spending patterns
 
