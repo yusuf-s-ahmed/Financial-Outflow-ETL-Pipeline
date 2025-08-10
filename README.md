@@ -1,4 +1,4 @@
-# Pre-Operating Expenses Data Pipeline Infrastructure
+# Pre-Operating Finanical Expenses Data Pipeline
 
 This project implements a data pipeline infrastructure using Terraform, AWS, and Snowflake to process and analyse pre-operating expenses financial data. The solution provides automated infrastructure provisioning, data processing with PySpark, and cloud-based data warehousing, Snowflake to extract financial analytics using SQL.
 
