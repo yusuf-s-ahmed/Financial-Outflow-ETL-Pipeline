@@ -214,25 +214,22 @@ ORDER BY year;
 | 2025 | $4,567.89    | Marketing     |
 | 2026 | $6,789.12    | Technology    |
 
-### Visualizations
+### Visualisations
 
 The pipeline generates several visualizations from the sample data:
 
-1. **Total Expenses per Category** (`sample-data/total_expenses_per_category.png`)
-   - Bar chart showing expense distribution across categories
-   - Marketing and Technology typically have the highest costs
+1. **Total Expenses per Category**  
+   ![Total Expenses per Category](sample-data/total_expenses_per_category.png)
 
-2. **Monthly Expense Trends** (`sample-data/total_expenses_per_category_per_month.png`)
-   - Line chart showing expense trends over time
-   - Helps identify seasonal spending patterns
+2. **Monthly Expense Trends**  
+   ![Monthly Expense Trends](sample-data/total_expenses_per_category_per_month.png)
 
-3. **Historical Expense Data** (`sample-data/historical_expense_data.png`)
-   - Time series analysis of all expenses
-   - Useful for budget planning and forecasting
+3. **Historical Expense Data**  
+   ![Historical Expense Data](sample-data/historical_expense_data.png)
 
-4. **Category Analysis Summary** (`sample-data/total_expenses_per_category_per_month_summary.png`)
-   - Heatmap showing category performance by month
-   - Comprehensive view of spending patterns
+4. **Category Analysis Summary**  
+   ![Category Analysis Summary](sample-data/total_expenses_per_category_per_month_summary.png)
+
 
 ## Implementation Details
 
