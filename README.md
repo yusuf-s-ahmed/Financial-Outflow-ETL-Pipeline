@@ -219,16 +219,16 @@ ORDER BY year;
 The pipeline generates several visualizations from the sample data:
 
 1. **Total Expenses per Category**  
-   ![Total Expenses per Category](sample-data/total_expenses_per_category.png)
+   ![Total Expenses per Category](visualisations/total_expenses_per_category.png)
 
 2. **Monthly Expense Trends**  
-   ![Monthly Expense Trends](sample-data/total_expenses_per_category_per_month.png)
+   ![Monthly Expense Trends](visualisations/total_expenses_per_category_per_month.png)
 
 3. **Historical Expense Data**  
-   ![Historical Expense Data](sample-data/historical_expense_data.png)
+   ![Historical Expense Data](visualisations/historical_expense_data.png)
 
 4. **Category Analysis Summary**  
-   ![Category Analysis Summary](sample-data/total_expenses_per_category_per_month_summary.png)
+   ![Category Analysis Summary](visualisations/total_expenses_per_category_per_month_summary.png)
 
 
 ## Implementation Details
