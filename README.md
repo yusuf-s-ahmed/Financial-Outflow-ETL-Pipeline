@@ -7,7 +7,7 @@ This project implements a data pipeline infrastructure using Terraform, AWS, and
 This is a sample dashboard using `sample-data` in the sample-data folder
 
 1. **Total Expenses per Category**  
-   ![Total Expenses per Category](powerbi-dashboard/powerbi_dashboard.pdf)
+   ![Total Expenses per Category](powerbi-dashboard/powerbi_dashboard.jpg)
 
 ## Table of Contents
 
