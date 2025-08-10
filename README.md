@@ -76,11 +76,11 @@ ORDER BY TOTAL_AMOUNT DESC;
 **Example Output:**
 | TOTAL_AMOUNT | CATEGORY_TYPE |
 |--------------|---------------|
-| $5,234.56    | Marketing     |
-| $3,456.78    | Technology    |
-| $2,890.12    | Legal         |
-| $1,567.89    | Office Expenses |
-| $987.65      | Insurance     |
+| 5,234.56    | Marketing     |
+| 3,456.78    | Technology    |
+| 2,890.12    | Legal         |
+| 1,567.89    | Office Expenses |
+| 987.65      | Insurance     |
  
 ![Total Expenses per Category](visualisations/total_expenses_per_category.png)
 
@@ -101,10 +101,10 @@ ORDER BY YEAR, MONTH, TOTAL_AMOUNT DESC;
 **Example Output:**
 | MONTH | YEAR | TOTAL_AMOUNT | CATEGORY_TYPE |
 |-------|------|--------------|---------------|
-| May   | 2025 | $57.29       | Intellectual Property |
-| June  | 2025 | $1,234.56    | Technology    |
-| July  | 2025 | $2,345.67    | Marketing     |
-| August| 2025 | $3,456.78    | Marketing     |
+| May   | 2025 | 57.29       | Intellectual Property |
+| June  | 2025 | 1,234.56    | Technology    |
+| July  | 2025 | 2,345.67    | Marketing     |
+| August| 2025 | 3,456.78    | Marketing     |
 
 
 ![Monthly Expense Trends](visualisations/total_expenses_per_category_per_month.png)
@@ -172,8 +172,8 @@ order by year, month;
 **Example Output:**
 | YEAR | TOTAL_AMOUNT | CATEGORY_TYPE |
 |------|--------------|---------------|
-| 2025 | $4,567.89    | Marketing     |
-| 2026 | $6,789.12    | Technology    |
+| 2025 | 4,567.89    | Marketing     |
+| 2026 | 6,789.12    | Technology    |
 
 
 
